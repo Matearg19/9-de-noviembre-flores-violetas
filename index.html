@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#281333">
+  <title>Un ramo especial 💜</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <p class="kicker">9 de noviembre · flores violetas</p>
+    <h1>Un ramo especial… 💜</h1>
+    <p class="intro">Hay pequeños detalles que guardan mucho cariño. Tocá cada flor y descubrí lo que esconde.</p>
+
+    <section class="bouquet" aria-label="Ramo de flores violetas">
+      <img src="ramo-violetas.png" alt="Ramo de flores violetas">
+      <button class="flower f1" data-flower="0" aria-label="Flor 1">✿</button>
+      <button class="flower f2" data-flower="1" aria-label="Flor 2">✿</button>
+      <button class="flower f3" data-flower="2" aria-label="Flor 3">✿</button>
+      <button class="flower f4" data-flower="3" aria-label="Flor 4">✿</button>
+      <button class="flower f5" data-flower="4" aria-label="Flor 5">✿</button>
+      <button class="flower f6" data-flower="5" aria-label="Flor 6">✿</button>
+      <button class="flower f7" data-flower="6" aria-label="Flor 7">✿</button>
+    </section>
+
+    <section class="progress" aria-live="polite">
+      <div>Flores descubiertas: <strong><span id="count">0</span> / 7</strong></div>
+      <div class="track"><div class="fill" id="fill"></div></div>
+    </section>
+    <p class="hint" id="hint">Cada flor guarda una pequeña sorpresa ♡</p>
+
+    <section class="letter hidden" id="letter">
+      <h2>Una última cosita…</h2>
+      <p id="letterText">Quería regalarte algo distinto, algo que pudieras descubrir poquito a poco.
+
+No hace falta una fecha especial para recordarle a alguien lo importante que es. Ojalá estas flores te saquen una sonrisa y te recuerden que merecés cosas bonitas.
+
+Gracias por cada momento, por las risas y por esos pequeños detalles que, aunque parezcan simples, se quedan guardados.
+
+Con mucho cariño. 💜</p>
+      <button class="read-button" id="readButton">Ya terminé de leer ♡</button>
+    </section>
+
+    <p class="final hidden" id="final">Espera unos días… 💜</p>
+    <footer>Hecho con cariño, flor por flor.</footer>
+  </main>
+
+  <div class="overlay hidden" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="close" id="close" aria-label="Cerrar">×</button>
+      <p class="eyebrow">Una sorpresa para vos</p>
+      <h2 id="modalTitle">Una flor especial</h2>
+      <p id="modalBody"></p>
+      <div id="media"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

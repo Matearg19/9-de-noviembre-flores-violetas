@@ -1,0 +1,30 @@
+# Ramo de flores violetas 💜
+
+## Cómo publicarlo en GitHub Pages
+
+1. Descargá y descomprimí `ramo_violetas_github.zip`.
+2. Abrí tu repositorio de GitHub.
+3. Entrá en **Add file → Upload files**.
+4. Subí `index.html`, `style.css`, `script.js` y `ramo-violetas.png` (todos en la raíz del repositorio).
+5. Tocá **Commit changes**.
+6. En el repositorio, abrí **Settings → Pages**.
+7. En **Build and deployment**, elegí **Deploy from a branch**, rama `main` y carpeta `/ (root)`. Guardá.
+8. GitHub te mostrará el enlace de tu página en esa misma sección.
+
+## Cambiar los mensajes
+
+Abrí `script.js` y editá los siete objetos del arreglo `surprises`. Cada uno tiene `title` y `text`.
+
+## Agregar fotos
+
+1. Creá una carpeta llamada `fotos` en el repositorio y subí, por ejemplo, `foto1.jpg`.
+2. En el objeto de una flor, cambiá sus propiedades para que quede así:
+   `{ title: "Un recuerdo", text: "Una foto para vos", type: "photo", src: "fotos/foto1.jpg" }`
+
+## Agregar videos
+
+1. Creá una carpeta llamada `videos` y subí un video MP4 pequeño.
+2. En la flor elegida usá:
+   `{ title: "Un momento", text: "Quería compartirte esto", type: "video", src: "videos/video1.mp4" }`
+
+La página no incluye el cuestionario. Cuando se descubren las siete flores aparece la carta; al pulsar **“Ya terminé de leer”**, aparece **“Espera unos días…”**.

@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; }
+body {
+  margin: 0; min-height: 100vh; color: #fff8ff;
+  font-family: Georgia, "Times New Roman", serif;
+  background: radial-gradient(ellipse at 50% 12%, #633b78 0, #291638 48%, #160d20 100%);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .25;
+  background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 37px 37px;
+}
+.page { width: min(1050px, 94vw); margin: auto; padding: 38px 0 55px; text-align: center; position: relative; }
+.kicker { color: #e6c1f2; font: 13px Arial, sans-serif; letter-spacing: 3px; text-transform: uppercase; }
+h1 { font-size: clamp(36px, 7vw, 65px); font-weight: normal; margin: 10px 0; text-shadow: 0 0 24px #d49bea; }
+.intro { max-width: 560px; margin: 0 auto 24px; color: #e4cce9; font: 16px/1.6 Arial, sans-serif; }
+.bouquet { position: relative; max-width: 1000px; margin: auto; overflow: hidden; border: 1px solid #edbeff55; border-radius: 22px; box-shadow: 0 24px 80px #09050d99, 0 0 38px #b66bdb33; }
+.bouquet img { display: block; width: 100%; height: auto; }
+.flower {
+  position: absolute; transform: translate(-50%, -50%); width: clamp(39px, 6vw, 62px);
+  aspect-ratio: 1; border: 2px solid #f4d9ff; border-radius: 50%;
+  color: white; background: #70369188; font-size: clamp(20px, 3vw, 30px);
+  cursor: pointer; box-shadow: 0 0 12px #e7a9ff, 0 0 28px #d68aff88;
+  backdrop-filter: blur(4px); transition: transform .2s, background .2s;
+}
+.flower:hover, .flower:focus-visible { transform: translate(-50%, -50%) scale(1.15); background: #9c5db9; outline: 2px solid white; }
+.flower.seen { background: #59316d; border-color: #c6f2d2; box-shadow: 0 0 14px #b8f0d0; }
+.f1 { left: 35%; top: 29%; } .f2 { left: 51%; top: 20%; }
+.f3 { left: 67%; top: 33%; } .f4 { left: 47%; top: 48%; }
+.f5 { left: 65%; top: 58%; } .f6 { left: 35%; top: 65%; }
+.f7 { left: 52%; top: 72%; }
+.progress { width: min(420px, 90%); margin: 20px auto 0; padding: 14px 18px; border: 1px solid #c58bdf77; border-radius: 16px; background: #321b40aa; font: 14px Arial, sans-serif; }
+.track { height: 8px; margin-top: 10px; overflow: hidden; border-radius: 20px; background: #5a3c68; }
+.fill { width: 0; height: 100%; background: linear-gradient(90deg, #b66bd7, #f1c7ff); transition: width .35s; }
+.hint { color: #e8c9f3; font: italic 14px Arial, sans-serif; }
+.letter { max-width: 760px; margin: 38px auto 0; padding: 32px 28px; text-align: left; border: 1px solid #d9a8eb88; border-radius: 22px; background: linear-gradient(145deg, #49275bdb, #261431ef); box-shadow: 0 15px 55px #09040f88; animation: appear .7s ease; }
+.letter h2 { text-align: center; font-size: 34px; font-weight: normal; margin: 0 0 20px; }
+.letter p { color: #f3e4f7; font: 16px/1.85 Arial, sans-serif; white-space: pre-line; }
+.read-button { display: block; margin: 22px auto 0; padding: 13px 22px; border: 1px solid #f0d0ff; border-radius: 30px; background: #a45fc0; color: white; font-size: 15px; cursor: pointer; }
+.final { margin: 32px 0 0; color: #f1caff; font-size: clamp(30px, 6vw, 48px); font-style: italic; text-shadow: 0 0 22px #d48bfa; animation: appear 1s ease; }
+footer { margin-top: 42px; color: #c9a9d5; font: 12px Arial, sans-serif; }
+.hidden { display: none !important; }
+.overlay { position: fixed; z-index: 5; inset: 0; display: flex; align-items: center; justify-content: center; padding: 18px; background: #100818df; }
+.modal { position: relative; width: min(520px, 100%); max-height: 90vh; overflow: auto; padding: 28px 24px; border: 1px solid #d7a5eb88; border-radius: 22px; background: linear-gradient(145deg, #49275b, #24132e); box-shadow: 0 20px 80px #0009; }
+.close { position: absolute; top: 8px; right: 14px; border: 0; background: transparent; color: white; font-size: 28px; cursor: pointer; }
+.eyebrow { color: #e0b5f0; font: 12px Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+.modal h2 { color: #fff1ff; font-size: 30px; font-weight: normal; }
+.modal p:not(.eyebrow) { color: #f0dff5; font: 16px/1.7 Arial, sans-serif; }
+.modal img, .modal video { display: block; width: 100%; margin-top: 12px; border-radius: 12px; }
+@keyframes appear { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) { .page { padding-top: 25px; } .bouquet { border-radius: 14px; } .letter { padding: 25px 19px; } }
